@@ -12,13 +12,24 @@ server.listen(3000, function(){
 	console.log("server started @3000");
 });
 
-server.get("/highscore", function(req, res, next){
+/*server.get("/highscore", function(req, res, next){
 	db.personalspace.find(function(err, personalspace){
 		res.writeHead(200, {
 			'Content-Type': 'application/json; charset=utf-8'
 		});
 		res.end(JSON.stringify(personalspace));
-	});
+	}});
+	return next();
+});*/
+
+server.get("/highscore", function(req, res, next){
+	db.personalspace.find().limit(15).sort({score: 1},
+		function(err, success){
+			res.writeHead(200, {
+				'Content-Type': 'application/json; charset=utf-8'
+			});
+			res.end(JSON.stringify(success));
+		});
 	return next();
 });
 

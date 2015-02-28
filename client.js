@@ -47,5 +47,5 @@ var testScore = {
 	score: "50",
 	enemiesKilled: "15"
 }
-
-postHighscore(testScore);
+/*
+postHighscore(testScore);*/
