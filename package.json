@@ -1,0 +1,19 @@
+{
+  "name": "personalSpaceServer",
+  "version": "1.0.0",
+  "description": "RestAPI for Personal Space, an InnerCircleGames production.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Personal",
+    "Space"
+  ],
+  "author": "InnerCircleGames",
+  "license": "ISC",
+  "devDependencies": {
+    "mongojs": "^0.18.1",
+    "restify": "^2.8.5"
+  }
+}
